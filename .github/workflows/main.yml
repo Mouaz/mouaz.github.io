@@ -4,9 +4,7 @@ name: publish gh pages to mouaz.info
 # events but only for the master branch
 on:
   push:
-    branches: [ src ]
-  pull_request:
-    branches: [ src ]
+    branches: src
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -23,12 +21,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install Packages
       run: npm install
-    - name: Deploy to GH Pages
+    - name: npm build
       run: npm run build
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
-        publish_branch: master  # deploying branch: 
+        publish_branch: master  # deploying branch
         cname: mouaz.info 
