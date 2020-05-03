@@ -22,6 +22,6 @@ jobs:
 
       - name: Deploy to GH Pages
             run: git config --global user.email ${{ secrets.GITHUB_EMAIL }}
-              git config --global user.name Mouaz
-              git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/Mouaz/mouaz.github.io.git
-              npm run deploy
+            run: git config --global user.name Mouaz
+            run:  git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/Mouaz/mouaz.github.io.git
+            run:   npm run deploy
