@@ -17,8 +17,8 @@ jobs:
           node-version: '12.x'
 
       - run: npm install
-      - run: npm prdeploy
-      - run: npm deploy
+      - run: npm run prdeploy
+      - run: npm run deploy
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
