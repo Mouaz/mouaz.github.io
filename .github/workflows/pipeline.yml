@@ -17,8 +17,6 @@ jobs:
           node-version: '12.x'
 
       - run: npm install
-      - run: npm run predeploy
-      - run: npm run deploy
 
       - name: Deploy to GH Pages
         run: |
