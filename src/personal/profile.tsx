@@ -5,6 +5,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Image from 'react-bootstrap/Image';
 import { GrLinkedin } from 'react-icons/gr';
 import { FaHackerrank, FaRegFilePdf, FaGithub } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 
 const linkStyle = {textDecoration: 'none', color: 'black' };
 
@@ -33,6 +34,10 @@ function Profile() {
       <ListGroup.Item><a href="https://www.hackerrank.com/mouaz"
     rel="noopener noreferrer" target="_blank" style={linkStyle}>
       <span><FaHackerrank /></span> /mouaz</a>
+      </ListGroup.Item>
+      <ListGroup.Item><a href="https://leetcode.com/alabsawi/"
+    rel="noopener noreferrer" target="_blank" style={linkStyle}>
+      <span><SiLeetcode /></span> /alabsawi</a>
       </ListGroup.Item>
   </ListGroup>
   </Card.Body>
